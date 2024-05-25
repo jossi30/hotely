@@ -8,6 +8,7 @@ import { MapPin } from "lucide-react";
 import {motion} from "framer-motion";
 import { fadeIn } from "@/variants";
 import DatePicker from "./DatePicker";
+import GuestSelect from "./GuestSelect";
 
 const SearchBox = () => {
   return (
@@ -25,9 +26,22 @@ const SearchBox = () => {
             <Label>Check in</Label>
             <DatePicker />
           </div>
+
+          <div>
+            <Label>Check out</Label>
+            <DatePicker />
+          </div>
+
         </div>
       </div>
       
+      <div>
+        <div>
+          <Label>Guests</Label>
+          <GuestSelect />
+        </div>
+      </div>
+
     </div>
   )
 }
