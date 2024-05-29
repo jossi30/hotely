@@ -8,14 +8,26 @@ import { Button } from "./ui/button";
 import Stats from "./Stats";
 
 const About = () => {
-  return <section className="py-12">
-    <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-rom">
-            <div className="flex=1 relative">
-                <Image src={'/about/img2.png'} width={559} height={721} alt='' />
-            </div>
-            <d className="x1:max-w-[470px]">
-                <h2 className="h2 mb-[38px]">About j30-Hotely</h2>
+  return ( <section className="py-12">
+    <div className="container mx-auto ">
+        <div className="flex flex-col xl:flex-row">
+            <motion.div 
+                variants={fadeIn('right',0.2)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.4}}
+                className=" flex-1 relative"
+                >
+                <Image src={'/about/img2.png'} width={959} height={1221} alt='' />
+            </motion.div>
+            <motion.div 
+                variants={fadeIn('left',0.5)}
+                initial='hidden'
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.4}}
+                className='x1:max-w-[470px]'
+                >
+                <h2 className="h2 mb-[38px]">About Hotely</h2>
                 <p>
                 At j30-Hotely, we redefine the art of hospitality.Our hotels offer a perfect blend of modern elegance and timeless charm. Whether you are here for business, leisure, or a special occasion, we provide an unparalleled experience that will leave you with lasting memories.
                 </p>
@@ -23,12 +35,13 @@ const About = () => {
                 <p className="mb-10 ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam numquam dolorum quam impedit obcaecati fugiat quos distinctio! Aspernatur mollitia provident, nesciunt ea consequuntur, ab explicabo laboriosam sequi vero illum harum.
                 </p>
-                <Button variants='accent'>Explore More</Button>
-            </d> 
+                <Button variant='accent'>Explore More</Button>
+            
+            </motion.div> 
         </div>
     </div>
   </section>
-  
+  )
 }
 
 export default About
